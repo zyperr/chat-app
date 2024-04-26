@@ -1,10 +1,16 @@
-
+import { BrowserRouter,Route,Routes } from "react-router-dom"
+import Header from "./components/Header"
+import { Land } from "./pages/main_path/Land"
+import "./styles/main.css"
 function App() {
   return (
     <>
-      <div>
-        Hola
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Land/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
