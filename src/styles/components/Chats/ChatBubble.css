@@ -1,0 +1,50 @@
+@import url("../../base/var.css");
+.chat-bubble{
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+}
+
+.chat-bubble-img{
+    width: 67px;
+    height: 67px;
+    margin: 10px;
+    .chat-user-img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #948f8f;
+    }
+}
+.chat-buble-status{
+    display: flex;
+    flex-direction: column;
+}
+.chat-bubble-info{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 8px 0px ;
+    .chat-bubble-username{
+        color: var(--primary-color);
+        font-size: var(--font-size-default);
+    }
+    .chat-bubble-time{
+        color: var(--text-not-important);
+    }
+}
+
+.chat-bubble-text{
+    p{
+        max-width: 350px;   
+    }
+}
