@@ -1,0 +1,25 @@
+@import url("../base/var.css");
+.btn{
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 10px 16px;
+    height: 38px;
+    min-width: 96px;
+    min-height: 38px;
+    border: none;
+    color: var(--text-link-color);
+    background-color: var( --bg-link);
+    transition: background-color .17s ease,color .17s ease;
+    &:hover {
+        color: var(--text-link-hover);
+        background-color: var(--bg-hover-link);
+    }
+
+
+}
