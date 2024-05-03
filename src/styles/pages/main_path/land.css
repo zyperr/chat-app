@@ -1,0 +1,214 @@
+@import url("../../base/var.css");
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+section:nth-child(odd) {
+  background-color: #313338;
+}
+.about {
+  position: relative;
+  .about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #111b21;
+    clip-path: polygon(
+      100% 100%,
+      0% 100%,
+      0% 60.84%,
+      2% 62.73%,
+      4% 64.58%,
+      6% 66.4%,
+      8% 68.17%,
+      10% 69.9%,
+      12% 71.58%,
+      14% 73.21%,
+      16% 74.77%,
+      18% 76.28%,
+      20% 77.72%,
+      22% 79.08%,
+      24% 80.38%,
+      26% 81.59%,
+      28% 82.73%,
+      30% 83.79%,
+      32% 84.76%,
+      34% 85.64%,
+      36% 86.43%,
+      38% 87.13%,
+      40% 87.73%,
+      42% 88.24%,
+      44% 88.66%,
+      46% 88.97%,
+      48% 89.19%,
+      50% 89.31%,
+      52% 89.33%,
+      54% 89.25%,
+      56% 89.07%,
+      58% 88.79%,
+      60% 88.42%,
+      62% 87.94%,
+      64% 87.37%,
+      66% 86.71%,
+      68% 85.96%,
+      70% 85.11%,
+      72% 84.17%,
+      74% 83.15%,
+      76% 82.05%,
+      78% 80.86%,
+      80% 79.59%,
+      82% 78.26%,
+      84% 76.85%,
+      86% 75.37%,
+      88% 73.82%,
+      90% 72.22%,
+      92% 70.56%,
+      94% 68.85%,
+      96% 67.09%,
+      98% 65.29%,
+      100% 63.45%
+    );
+  }
+}
+
+.chat {
+  position: relative;
+  .wave {
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+  }
+  .avatar_container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    .avatar {
+      overflow: hidden;
+      img {
+        background: #1f222b;
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .avatar__overlay {
+      position: absolute;
+      top: 5px;
+      left: 75px;
+      cursor: pointer;
+      color: var(--text-color-default);
+      .avatar__plus {
+        font-size: var(--font-size-big);
+        background: var(--btn-bg-color);
+        border-radius: 100%;
+        padding: 0px 10px;
+      }
+    }
+    .avatar__overlay:hover .avatar__plus {
+      color: var(--text-color-hover);
+    }
+  }
+  .avatar_container:nth-child(odd) {
+    animation: updown 1.5s alternate infinite;
+  }
+  .avatar_container:nth-child(even) {
+    animation: y-down 1.5s alternate infinite;
+  }
+  .avatar_container:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .avatar_container:nth-child(2) {
+    top: 60px;
+    right: 35px;
+  }
+  .avatar_container:nth-child(3) {
+    bottom: 65px;
+    left: 20px;
+  }
+  .avatar_container:nth-child(4) {
+    bottom: 20px;
+    right: 20px;
+  }
+  .avatar_container:nth-child(5) {
+    top: 10px;
+    left: 5px;
+  }
+}
+.get-started {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    rotate: -180deg;
+    background-color: #111B21;
+    top: 0;
+    clip-path: polygon(100% 100%, 0% 100% , 0.00% 78.46%, 6.67% 76.82%, 13.33% 73.28%, 20.00% 68.14%, 26.67% 61.82%, 33.33% 54.88%, 40.00% 47.90%, 46.67% 41.48%, 53.33% 36.16%, 60.00% 32.41%, 66.67% 30.54%, 73.33% 30.71%, 80.00% 32.91%, 86.67% 36.95%, 93.33% 42.48%, 100.00% 49.04%);
+  }
+}
+h2 {
+  margin: 5px;
+  line-height: 1.5;
+}
+.subtitle {
+  color: var(--subtitle-color);
+  margin: 10px;
+  line-height: 1.3;
+  opacity: 0.6;
+  max-width: 300px;
+  span{
+    color: #fdfeff;
+    font-weight: 600;
+    animation: change-color 2s infinite alternate;
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translate(0, 0%);
+    rotate: 0deg;
+  }
+  100% {
+    transform: translate(20px, 5%);
+    rotate: 10deg;
+  }
+}
+
+@keyframes change-color {
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: #F87067;
+  }
+  100% {
+    color: #78D4F7;
+  }
+}
+
+@keyframes y-down {
+  0% {
+    transform: translateY(0);
+    rotate: 0deg;
+  }
+  100% {
+    transform: translateY(-20px);
+    rotate: -15deg;
+  }
+}
